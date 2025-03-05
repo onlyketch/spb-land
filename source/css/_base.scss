@@ -1,0 +1,64 @@
+$red: #D61336;
+$dark: #0D1823;
+$dark-light: #161719;
+$light: #F3F3F3;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark;
+    -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    appearance: none;
+    background-color: $red;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background-color: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
