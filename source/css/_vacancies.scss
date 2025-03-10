@@ -1,0 +1,262 @@
+.vacancies {
+    margin-top: 92px;
+    background-color: #F3F3F3;
+    border-radius: 24px;
+    overflow: hidden;
+
+    &__wrapper {
+        padding: 48px 52px 108px;
+        box-sizing: border-box;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-left {
+            display: flex;
+            align-items: center;
+        }
+
+        &-title {
+            margin-right: 26px;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+        }
+
+        &-offers-counter {
+            font-weight: 500;
+            line-height: 20px;
+            margin-left: 12px;
+            user-select: none;
+        }
+    }
+
+    &__slider {
+        margin-top: 48px;
+
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            flex-shrink: 0;
+            max-width: 352px;
+            margin-right: 36px;
+
+            &:last-child {
+                margin-right: 0; 
+            }
+        }
+    }
+
+    &__slider-item {
+        background-color: white;
+        border-radius: 16px;
+        max-width: 352px;
+        height: 354px;
+        box-sizing: border-box;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        user-select: none;
+
+        &-name {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: $dark-light;
+        }
+
+        &-price {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: $dark-light;
+            opacity: 0.6;
+            margin-top: 16px;
+        }
+
+        &-nds {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $dark-light;
+            opacity: 0.6;
+            margin-top: 2px;
+        }
+
+        &-tags {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        &-tag {
+            background-color: #F3F3F4;
+            border-radius: 24px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: $dark-light;
+            opacity: 0.6;
+            box-sizing: border-box;
+            padding: 6px 8px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            white-space: nowrap;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &-btn {
+            display: block;
+            text-align: center;
+            margin-top: 16px;
+        }
+    }
+
+
+    &__offer {
+        background-color: $red;
+        color: white;
+        user-select: none;
+
+        &-wrapper {
+            display: flex;
+            padding: 56px 52px 103px;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        &-left {
+            flex-shrink: 0;
+        }
+
+        &-form {
+
+            &-title {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 44px;
+            }
+
+            &-subtitle {
+                font-weight: 400;
+                line-height: 22px;
+                max-width: 450px;
+                margin-top: 8px;
+            }
+
+            &-row {
+                margin-top: 42px;
+                display: flex;
+                align-items: flex-end;
+            }
+
+            &-group {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 342px;
+            }
+
+            &-label {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                margin-bottom: 12px;
+            }
+
+            &-input {
+                border: none;
+                outline: none;
+                appearance: none;
+                border-radius: 8px;
+                background-color: white;
+                padding: 16px 20px;
+                box-sizing: border-box;
+                width: 100%;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                color: #202B39;
+
+                &::placeholder {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #202B39;
+                    opacity: 0.6;
+                }
+            }
+
+            &-submit {
+                background-color: white;
+                color: $red;
+                margin-left: 11px;
+            }
+        }
+
+        &-right {
+            margin-left: 45px;
+            width: 100%;
+        }
+
+        &-person {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            &-photo {
+                width: 336px;
+                height: 445px;
+                position: absolute;
+                bottom: -103px;
+                z-index: 20;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &-info {
+                position: absolute;
+                bottom: -33px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(32px);
+                border-radius: 12px;
+                padding: 20px 34px 27px 119px;
+            }
+
+            &-name {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            &-position {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                opacity: 0.7;
+                margin-top: 4px;
+                max-width: 230px;
+            }
+        }
+    }
+
+}

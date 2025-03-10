@@ -1,0 +1,87 @@
+.footer {
+    background-color: $dark;
+
+    &__wrapper {
+        padding: 52px 52px 33px;
+        width: 73.6153%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: stretch;
+    }
+
+    &__up {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+
+        &-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgb(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        &-text {
+            font-weight: 400;
+            color: white;
+            font-size: 14px;
+            line-height: 20px;
+            margin-left: 15px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        &-link {
+            font-weight: 500;
+            color: white;
+            font-size: 12px;
+            line-height: 16px;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__phone {
+        font-weight: 500;
+        color: white;
+        font-size: 48px;
+        line-height: 48px;
+        margin-top: 56px;
+    }
+
+    &__btn {
+        margin-top: 28px;
+    }
+
+    &__copyright {
+        font-weight: 400;
+        color: white;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 154px;
+    }
+}
+

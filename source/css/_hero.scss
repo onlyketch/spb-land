@@ -63,11 +63,53 @@
     }
 
     &__slider {
+        position: relative;
         width: 383px;
         background: rgba(232, 232, 232, 0.1);
         backdrop-filter: blur(32px);
         border-radius: 12px;
         margin-top: 27px;
+        overflow: hidden;
+        user-select: none;
+
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-dots {
+            display: flex;
+            align-items: center;
+            height: 8px;
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+
+            li {
+                list-style: none;
+                margin-right: 8px;
+
+                &:last-child {
+                    margin-right: 0; 
+                }
+
+                &.slick-active button {
+                    background-color: white;
+                }
+            }
+
+            button {
+                border: none;
+                outline: none;
+                appearance: none;
+                font-size: 0;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                padding: 0;
+                background-color: rgb(255, 255, 255, 0.3);
+                cursor: pointer;
+            }
+        }
         
         &-item {
             position: relative;
@@ -90,6 +132,7 @@
             line-height: 16px;
             max-width: 283px;
             margin-top: 4px;
+            opacity: 0.7;
         }
 
         &-icon {
