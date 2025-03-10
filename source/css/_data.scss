@@ -1,0 +1,34 @@
+.data {
+    display: flex;
+    align-items: center;
+    padding-top: 37px;
+
+    &__box {
+        margin-right: 110px;
+        white-space: nowrap;
+
+        &:last-child {
+            flex-grow: 1;
+            text-align: right;
+            margin-right: 0; 
+        }
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        opacity: 0.5;
+    }
+
+    &__value {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 8px;
+    }
+
+    &__value-in-month {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,112 @@
+.hero {
+    position: relative;
+    padding: 270px 0 110px 0;
+    background-color: #9C9EA6;
+    background-image: url('../images/cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(13, 24, 35, 0.3);
+        z-index: 40;
+    }
+
+    &__gradient {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 524px;
+        background: linear-gradient(180deg, rgba(13, 24, 35, 0.9) 0%, rgba(13, 24, 35, 0) 100%);
+        transform: rotate(-180deg);
+        z-index: 30;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        z-index: 50;
+    }
+
+    &__left {
+    }
+
+    &__title {
+        color: white;
+        max-width: 670px;
+    }
+
+    &__info {
+    }
+
+    &__class {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 32px;
+        color: white;
+        max-width: 550px;
+        margin-top: 111px;
+    }
+
+    &__description {
+        color: white;
+        max-width: 345px;
+        margin-top: 16px;
+    }
+
+    &__slider {
+        width: 383px;
+        background: rgba(232, 232, 232, 0.1);
+        backdrop-filter: blur(32px);
+        border-radius: 12px;
+        margin-top: 27px;
+        
+        &-item {
+            position: relative;
+            color: white;
+            padding: 20px 80px 40px 20px;
+            box-sizing: border-box;
+            
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+            max-width: 283px;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            max-width: 283px;
+            margin-top: 4px;
+        }
+
+        &-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+        }
+
+    }
+
+    &__right {
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 24px
+    }
+}
+

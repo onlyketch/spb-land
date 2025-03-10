@@ -1,0 +1,94 @@
+.features {
+    margin-top: 92px;
+
+    &__head {
+        display: flex;
+        align-items: center;
+
+        &-title {
+            margin-right: 29px;
+        }
+    }
+
+    &__slider-control {
+        display: flex;
+        justify-content: space-between;
+        width: 92px;
+
+        &-left, &-right {
+            width: 40px;
+            height: 40px;
+            background: rgba(226, 226, 226, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        &-right {
+            transform: scaleX(-1);
+        }
+    }
+
+    &__slider {
+
+        &-item {
+            position: relative;
+            width: 384px;
+            height: 512px;
+            border-radius: 24px;
+            overflow: hidden;
+
+            &-info {
+                position: absolute;
+                left: 24px;
+                right: 24px;
+                bottom: 24px;
+                background: rgba(232, 232, 232, 0.1);
+                backdrop-filter: blur(32px);
+                border-radius: 12px;
+                color: white;
+                padding: 16px 20px 20px 20px;
+                box-sizing: border-box;
+                height: 140px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                z-index: 20;
+            }
+
+            &-title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 22px;
+            }
+
+            &-text {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                opacity: 0.8;
+                max-width: 280px;
+            }
+
+            &-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &-gradient {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 269px;
+                background: linear-gradient(180deg, rgba(13, 24, 35, 0.8) 0%, rgba(13, 24, 35, 0) 100%);
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+}
