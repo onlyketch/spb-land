@@ -6,6 +6,10 @@
 
     &__items {
         margin-top: 48px;
+
+        @media (max-width: 1023px) {
+            margin-top: 33px;
+        }
     }
 
     &__items-row {
@@ -14,6 +18,15 @@
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        @media (max-width: 1174px) {
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            margin-bottom: 20px;
         }
     }
 
@@ -38,21 +51,41 @@
             .main-features__item-big-name {
                 max-width: 244px;
             }
+
+            @media (max-width: 1023px) {
+                max-width: 100%; //358
+            }
         }
 
         &:first-child {
             max-width: 100%;
             flex-grow: 1;
+
+            @media (max-width: 1023px) {
+                max-width: 100%; //358
+                flex-grow: 0;
+            }
         }
 
         &:last-child {
-            margin-right: 0; 
+            margin-right: 0;
+            margin-bottom: 0; 
         }
 
         .icon-box {
             position: absolute;
             top: 34px;
             right: 34px;
+
+            @media (max-width: 1174px) {
+                top: 24px;
+                right: 24px; 
+            }
+
+            @media (max-width: 1023px) {
+                top: 20px;
+                right: 20px; 
+            }
         }
 
         &-name {
@@ -86,7 +119,34 @@
             font-size: 32px;
             line-height: 36px;
             max-width: 500px;
+
+            @media (max-width: 1174px) {
+                font-size: 28px;
+                line-height: 32px;
+            }
+
+            @media (max-width: 1023px) {
+                font-size: 24px;
+                line-height: 28px;
+                max-width: 262px; 
+            }
         }
+
+        @media (max-width: 1174px) {
+            margin-right: 24px;
+            padding: 24px;
+        }
+
+        @media (max-width: 1023px) {
+            max-width: 100%; //358
+            margin-right: 0;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        margin-top: 64px;
     }
 }
 

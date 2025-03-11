@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    /* Маски для инпутов с телефонами */
+
+    const vacanciesInputPhone = document.getElementById('phone');
+    const modalInputPhone = document.getElementById('callback-phone');
+
+    const maskOptions = {
+        mask: '+{7} 000 000-00-00'
+    };
+
+    const vacanciesMask = IMask(vacanciesInputPhone, maskOptions);
+    const modalMask = IMask(modalInputPhone, maskOptions);
+
+    vacanciesInputPhone.addEventListener('focus', function() {
+        vacanciesMask.value = '+7 ';
+    });
+
+    modalInputPhone.addEventListener('focus', function() {
+        modalMask.value = '+7 ';
+    });
 
     /* Слайдер 1 экран */
 
@@ -8,10 +28,25 @@ document.addEventListener('DOMContentLoaded', function() {
         infinite: false,
         arrows: false,
         dots: true,
-        touchThreshold: 50,
+        draggable: false,
         speed: 300
     });
 
+    /* Мобильный слайдер */
+
+    if ($('.mobile-slider ') !== null) {
+
+        $('.mobile-slider ').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false,
+            dots: true,
+            draggable: false,
+            speed: 300
+        });
+
+    }
 
     /* Слайдер особенности */
 
@@ -24,7 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
         infinite: false,
         arrows: false,
         touchThreshold: 50,
-        speed: 200
+        speed: 200,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     featuresButtonLeft.addEventListener('click', function() {
@@ -46,7 +89,21 @@ document.addEventListener('DOMContentLoaded', function() {
         infinite: false,
         arrows: false,
         touchThreshold: 50,
-        speed: 200
+        speed: 200,
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     vacanciesButtonLeft.addEventListener('click', function() {
@@ -84,7 +141,44 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.about__slider').slick('slickPrev');
     });
 
+    /* popUp Заказать звонок */
 
+    let popUp = document.querySelector('.callback-popup'),
+        popUpOverlay = document.querySelector('.callback-popup__overlay'),
+        popUpBody = document.querySelector('.callback-popup__body'),
+        popUpBodyCloseBtn = document.querySelector('.callback-popup__body-close'),
+        callbackBtn = document.querySelector('.callback'),
+        headerContainer = document.querySelector('.header > .container');
+    
+    function lockBody() {
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+        document.body.classList.add('popup-open');
+        headerContainer.classList.add('fix-move');
+    }
+
+    function unlockBody() {
+        document.body.classList.remove('popup-open');
+        document.documentElement.style.removeProperty('--scrollbar-width');
+        headerContainer.classList.remove('fix-move');
+    }
+    
+    callbackBtn.addEventListener('click', function() {
+        lockBody();
+        popUp.classList.add('open');
+        popUpOverlay.classList.add('show');
+        popUpBody.classList.add('open');
+    });
+
+    popUpBodyCloseBtn.addEventListener('click', function() {
+        popUpBody.classList.remove('open');
+        setTimeout(function() {
+            popUpOverlay.classList.remove('show');
+            popUp.classList.remove('open');
+            unlockBody();
+        }, 400);
+    });
+    
 
 
 

@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     background-color: $dark;
 
     &__wrapper {
@@ -7,6 +8,30 @@
         display: flex;
         align-items: stretch;
         justify-content: space-between;
+
+        @media (max-width: 1239px) {
+            width: 90%;
+        }
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            padding: 35px 32px 41px;
+        }
+
+        @media (max-width: 767px) {
+            padding: 35px 16px 41px;
+        }
+    }
+
+    &__logo {
+
+        svg {
+            @media (max-width: 1023px) {
+                width: 162px;
+                height: 32px;
+            }
+        }
+        
     }
 
     &__left {
@@ -16,7 +41,7 @@
         align-content: stretch;
     }
 
-    &__up {
+    &__up, &__mob-up {
         display: flex;
         align-items: center;
         margin-top: auto;
@@ -39,12 +64,23 @@
             line-height: 20px;
             margin-left: 15px;
         }
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
     }
 
     &__right {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding-top: 15px;
+        padding-bottom: 7px;
+
+        @media (max-width: 1023px) {
+            padding: 0;
+            margin-top: 48px;
+        }
     }
 
     &__nav {
@@ -60,7 +96,21 @@
 
             &:last-child {
                 margin-right: 0;
+
+                @media (max-width: 1023px) {
+                    margin-bottom: 0;
+                }
             }
+
+            @media (max-width: 1023px) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 
@@ -70,10 +120,18 @@
         font-size: 48px;
         line-height: 48px;
         margin-top: 56px;
+
+        @media (max-width: 1023px) {
+            font-size: 40px;
+        }
     }
 
     &__btn {
         margin-top: 28px;
+
+        @media (max-width: 1023px) {
+            margin-top: 16px; 
+        }
     }
 
     &__copyright {
@@ -82,6 +140,19 @@
         font-size: 14px;
         line-height: 20px;
         margin-top: 154px;
+
+        @media (max-width: 1023px)  {
+            margin-top: 85px; 
+        }
+    }
+
+    &__mob-up {
+        @media (max-width: 1023px) {
+            display: flex;
+            position: absolute;
+            bottom: 30px;
+            right: 16px;
+        }
     }
 }
 

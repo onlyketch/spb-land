@@ -7,7 +7,7 @@ function init() {
         behaviors: ['multiTouch', 'drag', 'scrollZoom']
     });
 
-    let placemark = new ymaps.Placemark([55.751481, 37.592219], {}, {
+    let placemark = new ymaps.Placemark([55.690622, 37.561654], {}, {
         iconLayout: 'default#image',
         iconImageHref: './images/placemark.png',
         iconImageSize: [57, 57],

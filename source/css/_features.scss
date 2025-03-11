@@ -8,6 +8,10 @@
         &-title {
             margin-right: 29px;
         }
+
+        @media (max-width: 1023px) {
+            justify-content: space-between;
+        }
     }
 
     &__slider {
@@ -17,7 +21,9 @@
         &-item {
             position: relative;
             width: 384px;
+            min-width: 384px;
             height: 512px;
+            box-sizing: border-box;
             border-radius: 24px;
             overflow: hidden;
             flex-shrink: 0;
@@ -69,6 +75,11 @@
                 background: linear-gradient(180deg, rgba(13, 24, 35, 0.8) 0%, rgba(13, 24, 35, 0) 100%);
                 transform: rotate(-180deg);
             }
+
+            @media (max-width: 767px) {
+                width: 332px;
+                min-width: 332px;
+            }
         }
 
         .slick-track {
@@ -77,13 +88,30 @@
 
         .slick-slide {
             flex-shrink: 0;
+            width: 384px;
+            min-width: 384px;
             max-width: 384px;
             margin-right: 36px;
 
             &:last-child {
                 margin-right: 0; 
             }
+
+            @media (max-width: 767px) {
+                width: 332px;
+                min-width: 332px;
+                max-width: 332px;
+                margin-right: 20px;
+            }
         }
+
+        @media (max-width: 767px) {
+            margin-top: 24px;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        margin-top: 64px;
     }
 
 }

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -50,6 +50,7 @@
             <div class="hero__wrapper">
                 <div class="hero__left">
                     <h1 class="hero__title">Название комплекса длинное</h1>
+                    <button class="btn hero__mob-btn">Получить предложение</button>
                     <div class="hero__info">
                         <div class="hero__class">Современные склады класса *Х*</div>
                         <div class="hero__description">
@@ -116,6 +117,36 @@
                 </div>  
             </div>
 
+            <div class="mobile-slider">
+                <div class="mobile-slider-item">
+                    <div class="mobile-slider-title">Аренда без комиссии</div>
+                    <div class="mobile-slider-text">
+                        Договор напрямую с&nbsp;собственником склада,<br>без дополнительных платежей
+                    </div>
+                    <div class="icon-box mobile-slider-icon">
+                        <svg width="14" height="14" viewBox="0 0 14 14"><use xlink:href="icons/stack/icons.svg#star"></use></svg>
+                    </div>
+                </div>
+                <div class="mobile-slider-item">
+                    <div class="mobile-slider-title">Персональный менеджер</div>
+                    <div class="mobile-slider-text">
+                        Эксперт сопровождает на&nbsp;всех этапах сделки, согласовывает выгодные условия аренды
+                    </div>
+                    <div class="icon-box mobile-slider-icon">
+                        <svg width="22" height="20" viewBox="0 0 22 20"><use xlink:href="icons/stack/icons.svg#bag"></use></svg>
+                    </div>
+                </div>
+                <div class="mobile-slider-item">
+                    <div class="mobile-slider-title">Весь объем предложений</div>
+                    <div class="mobile-slider-text">
+                        Предлагаем все доступные и&nbsp;проверенные варианты аренды склада под ваши задачи
+                    </div>
+                    <div class="icon-box mobile-slider-icon">
+                        <svg width="23" height="22" viewBox="0 0 23 22"><use xlink:href="icons/stack/icons.svg#check"></use></svg>
+                    </div>
+                </div>
+            </div>
+
             <div class="about">
                <div class="about__wrapper">
                     <div class="about__sign">
@@ -153,13 +184,22 @@
                </div> 
             </div>
 
-            <div class="map" id="map">
-                <div class="map__info">
-                   <h2 class="map__info-title">Расположение</h2>
-                   <div class="map__info-text">
-                    PNK Парк Внуково располагается на&nbsp;Западе Москвы в&nbsp;22&nbsp;км от&nbsp;МКАД непосредственно на&nbsp;наименее загруженной трассе&nbsp;&mdash; Киевское (М3) шоссе. Уникальное месторасположение логистического парка и&nbsp;непосредственная близость к&nbsp;транспортным магистралям обеспечивает быстрый доступ к&nbsp;любой части Москвы.
-                   </div>
-                   <button class="map__btn btn">Проложить маршрут</button>
+            <div class="map__wrapper">
+                <div class="map__mob-title">Расположение</div>
+                <div class="map" id="map">
+                    <div class="map__info">
+                       <h2 class="map__info-title">Расположение</h2>
+                       <div class="map__info-text">
+                        PNK Парк Внуково располагается на&nbsp;Западе Москвы в&nbsp;22&nbsp;км от&nbsp;МКАД непосредственно на&nbsp;наименее загруженной трассе&nbsp;&mdash; Киевское (М3) шоссе. Уникальное месторасположение логистического парка и&nbsp;непосредственная близость к&nbsp;транспортным магистралям обеспечивает быстрый доступ к&nbsp;любой части Москвы.
+                       </div>
+                       <button class="map__btn btn">Проложить маршрут</button>
+                    </div>
+                </div>
+                <div class="map__mob-info">
+                    <div class="map__mob-info-text">
+                        PNK Парк Внуково располагается на&nbsp;Западе Москвы в&nbsp;22&nbsp;км от&nbsp;МКАД непосредственно на&nbsp;наименее загруженной трассе&nbsp;&mdash; Киевское (М3) шоссе. Уникальное месторасположение логистического парка и&nbsp;непосредственная близость к&nbsp;транспортным магистралям обеспечивает быстрый доступ к&nbsp;любой части Москвы.
+                    </div>
+                    <div class="map__mob-info-btn btn">Проложить маршрут</div>
                 </div>
             </div>
 
@@ -387,6 +427,12 @@
                             </div>
                         </div>
                    </div>
+                   <div class="vacancies__mob-offers-counter">
+                        <div class="icon-box">
+                            <svg width="14" height="18" viewBox="0 0 14 18"><use xlink:href="icons/stack/icons.svg#fire"></use></svg>
+                        </div>
+                        Осталось 6 предложений
+                   </div>
                 </div>
                 <div class="vacancies__offer">
                     <div class="vacancies__offer-wrapper">
@@ -449,7 +495,34 @@
                 </div>
             </div>
         </div>
+        <div class="footer__mob-up">
+            <div class="footer__mob-up-btn">
+                <svg width="9" height="12" viewBox="0 0 9 12"><use xlink:href="icons/stack/icons.svg#arrow-up"></use></svg>
+            </div>
+            <div class="footer__mob-up-text">Наверх</div>
+        </div>
     </footer>
+
+    <div class="callback-popup">
+        <div class="callback-popup__overlay"></div>
+        <div class="callback-popup__body">
+            <from class="callback-popup__form">
+                <div class="callback-popup__form-title">Заказать звонок</div>
+                <div class="callback-popup__form-text">
+                    Оставьте свой whatsapp номер, чтобы мы&nbsp;отправили вам коммерческое предложение и&nbsp;расчет стоимости
+                </div>
+                <div class="callback-popup__form-group">
+                    <label for="callback-phone" class="callback-popup__form-label">Номер телефона для связи</label>
+                    <input type="text" name="callback-phone" id="callback-phone" class="callback-popup__form-input" placeholder="+7">
+                    <div class="callback-popup__form-error-message">Ошибка валидации</div>
+                </div>
+                <input type="submit" value="Отправить" class="btn callback-popup__form-submit">
+            </from>
+            <button class="callback-popup__body-close">
+                <svg width="10" height="10" viewBox="0 0 10 10"><use xlink:href="icons/stack/icons.svg#close"></use></svg>
+            </button>
+        </div>
+    </div>
 
 
 
