@@ -1,0 +1,116 @@
+.modal-success {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+
+    &.open {
+        visibility: visible;
+    }
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        background-color: $dark;
+        opacity: 0;
+        transition: opacity .2s ease-out;
+
+        &.show {
+            opacity: 0.6;
+        }
+    }
+
+    &__body {
+        position: absolute;
+        top: 31px;
+        right: -100%;
+        background-color: white;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 582px;
+        min-height: 576px;
+        padding: 76px 68px 158px;
+        border-radius: 24px;
+        transition: all .5s ease-out;
+
+        &.open {
+            right: 59px;
+
+            @media (max-width: 767px) {
+                right: 32px;
+            }
+        }
+
+        &-close {
+            border: none;
+            outline: none;
+            appearance: none;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background-color: #F7F8FA;
+            position: absolute;
+            top: 32px;
+            right: 32px;
+
+            @media (max-width: 767px) {
+                top: 24px;
+                right: 24px;
+            }
+
+            @media (max-width: 368px) {
+                width: 32px;
+                height: 32px;
+            }
+
+            svg {
+                width: 8px;
+                height: 8px;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+            top: 60px;
+            padding: 32px 24px 60px;
+            max-width: 326px;
+            min-height: 396px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        @media (max-width: 368px) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        opacity: 0.6;
+        margin-top: 12px;
+        max-width: 395px;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 20px;
+            max-width: 240px;
+        }
+    }
+
+}

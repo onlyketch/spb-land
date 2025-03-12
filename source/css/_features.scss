@@ -80,6 +80,11 @@
                 width: 332px;
                 min-width: 332px;
             }
+
+            @media (max-width: 369px) {
+                width: 310px;
+                min-width: 310px;
+            }
         }
 
         .slick-track {
@@ -102,6 +107,12 @@
                 min-width: 332px;
                 max-width: 332px;
                 margin-right: 20px;
+            }
+
+            @media (max-width: 369px) {
+                width: 310px;
+                min-width: 300px;
+                max-width: 300px;
             }
         }
 

@@ -20,6 +20,27 @@ document.addEventListener('DOMContentLoaded', function() {
         modalMask.value = '+7 ';
     });
 
+    // Кнопки «Наверх»
+
+    let btnUp = document.querySelector('.footer__up-btn');
+    let monBtnUp = document.querySelector('.footer__mob-up-btn');
+
+    btnUp.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    monBtnUp.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    });
+
     /* Слайдер 1 экран */
 
     $('.hero__slider').slick({
@@ -28,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         infinite: false,
         arrows: false,
         dots: true,
-        draggable: false,
+        touchThreshold: 50,
         speed: 300
     });
 
@@ -154,11 +175,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
         document.body.classList.add('popup-open');
+        document.documentElement.classList.add('popup-open-for-html');
         headerContainer.classList.add('fix-move');
     }
 
     function unlockBody() {
         document.body.classList.remove('popup-open');
+        document.documentElement.classList.remove('popup-open-for-html');
         document.documentElement.style.removeProperty('--scrollbar-width');
         headerContainer.classList.remove('fix-move');
     }
@@ -178,6 +201,148 @@ document.addEventListener('DOMContentLoaded', function() {
             unlockBody();
         }, 400);
     });
+
+    // MODAL SUCCESS
+    let modalSuccess = document.querySelector('.modal-success');
+    let modalSuccessOverlay = document.querySelector('.modal-success__overlay');
+    let modalSuccessBody = document.querySelector('.modal-success__body');
+    let modalSuccessClose = document.querySelector('.modal-success__body-close');
+
+    function successOpen() {
+        modalSuccess.classList.add('open');
+        modalSuccessOverlay.classList.add('show');
+        modalSuccessBody.classList.add('open');
+    }
+
+    modalSuccessClose.addEventListener('click', function() {
+        modalSuccessBody.classList.remove('open');
+        setTimeout(function() {
+            modalSuccessOverlay.classList.remove('show');
+            modalSuccess.classList.remove('open');
+            unlockBody();
+        }, 400);
+    });
+
+
+
+    // MODAL SUBMIT, VALIDATION
+
+    let modalForm = document.querySelector('.callback-popup__form');
+    let modalFormGroup = document.querySelector('.callback-popup__form-group');
+    let modalPhoneInput = document.querySelector('.callback-popup__form-input');
+    let modalFormAnimation = document.querySelector('.callback-popup__body-send-animation');
+    let modalFormHaveErrors = false;
+
+    // validate
+
+    function formErrorsCheck() {
+        if (modalPhoneInput.value == '' || modalPhoneInput.value.length < 16) {
+            modalFormGroup.classList.add('error');
+            modalFormHaveErrors = true;
+        }
+    }
+
+    // fix error
+
+    modalPhoneInput.addEventListener('input', function() {
+        if (modalFormHaveErrors) {
+            if (modalPhoneInput.value.length == 16) {
+                modalFormGroup.classList.remove('error');
+                modalFormHaveErrors = false;
+            }
+        }
+    });
+
+    // submit
+
+    modalForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        formErrorsCheck();
+
+        if (modalFormHaveErrors == false) {
+            modalFormAnimation.classList.add('visible');
+            let form_data = $(this).serialize();
+
+            $.ajax({
+                // type: "POST", 
+                // url: "/form/",
+                // dataType: "json",
+                type: "GET",
+                url: "/",
+                //dataType: "json",
+                data: form_data,
+                success: function() {
+                    setTimeout(function() {
+                        modalFormAnimation.classList.remove('visible');
+                        popUpBody.classList.remove('open');
+                        popUpOverlay.classList.remove('show');
+                        popUp.classList.remove('open');
+                        successOpen();
+                    }, 600);
+                },
+                complete: function() {
+                    setTimeout(function() {
+                        modalFormAnimation.classList.remove('visible');
+                    }, 600);
+                }
+            });
+        }
+    });
+
+    // FORM SUBMIT, VALIDATION
+
+    let pageForm = document.querySelector('.vacancies__offer-form');
+    let pagePhoneInput = document.querySelector('.vacancies__offer-form-input');
+    let pageFormHaveErrors = false;
+
+    // validate
+
+    function pageFormErrorsCheck() {
+        if (pagePhoneInput.value == '' || pagePhoneInput.value.length < 16) {
+            pageFormHaveErrors = true;
+        }
+    }
+
+    // fix error
+
+    pagePhoneInput.addEventListener('input', function() {
+        if (pageFormHaveErrors) {
+            if (pagePhoneInput.value.length == 16) {
+                pageFormHaveErrors = false;
+            }
+        }
+    });
+
+    // submit
+
+    pageForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        pageFormErrorsCheck();
+
+        if (pageFormHaveErrors == false) {
+            let form_data = $(this).serialize();
+
+            $.ajax({
+                // type: "POST", 
+                // url: "/form/",
+                // dataType: "json",
+                type: "GET",
+                url: "/",
+                //dataType: "json",
+                data: form_data,
+                success: function() {
+                    lockBody();
+                    setTimeout(function() {
+                        successOpen();
+                    }, 400);
+                }
+            });
+        }
+    });
+
+
+
+    
     
 
 

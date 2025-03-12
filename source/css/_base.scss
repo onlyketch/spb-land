@@ -1,10 +1,14 @@
 $red: #D61336;
+$dark-red: #AB052E;
 $dark: #0D1823;
 $dark-light: #161719;
 $light: #F3F3F3;
+$light-gray: #F3F3F3;
 
 html {
     scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 body {
@@ -17,11 +21,6 @@ body {
     overflow-x: hidden;
     height: 100%;
     max-width: 100vw;
-
-    &.popup-open {
-        overflow-y: hidden;
-        padding-right: var(--scrollbar-width);
-    }
 }
 
 h1 {
@@ -84,6 +83,16 @@ a {
     color: white;
     cursor: pointer;
     white-space: nowrap;
+    user-select: none;
+    transition: all .3s ease-out;
+
+    &:hover {
+        background-color: $dark-red;
+
+        @media (max-width: 1023px) {
+            background-color: $red;
+        }
+    }
 }
 
 .icon-box {
@@ -206,4 +215,53 @@ a {
         display: block;
     }
 
+}
+
+.popup-open {
+    overflow: hidden;
+    padding-right: var(--scrollbar-width);
+
+    @media (max-width: 767px) {
+        padding-right: 0;
+    }
+}
+
+.popup-open-for-html {
+    overflow: hidden;
+}
+
+#callback-form {
+    scroll-margin-top: 200px;
+
+    @media (max-width: 1023px) {
+        scroll-margin-top: 40px;
+    }
+}
+
+#about {
+    scroll-margin-top: 60px;
+    
+    @media (max-width: 1023px) {
+        scroll-margin-top: 40px;
+    }
+}
+
+#location {
+    scroll-margin-top: 50px;
+
+    @media (max-width: 1023px) {
+        scroll-margin-top: 40px;
+    }
+}
+
+#main-features, #features {
+    scroll-margin-top: 50px;
+
+    @media (max-width: 1023px) {
+        scroll-margin-top: 40px;
+    }
+}
+
+#vacancies {
+    scroll-margin-top: 50px;
 }

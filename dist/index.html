@@ -14,7 +14,7 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-    <title>Document</title>
+    <title>Название складского комплекса</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=c43f32bb-8a64-4567-8d8c-c33c67284e01&lang=ru_RU"></script>
 </head>
@@ -28,11 +28,11 @@
                 </a>
                 <div class="header__right">
                     <div class="header__nav">
-                        <a href="#" class="header__nav-link">О комплексе</a>
-                        <a href="#" class="header__nav-link">Расположение</a>
-                        <a href="#" class="header__nav-link">Характеристики</a>
-                        <a href="#" class="header__nav-link">Особенности</a>
-                        <a href="#" class="header__nav-link">Помещения</a>
+                        <a href="#about" class="header__nav-link">О комплексе</a>
+                        <a href="#location" class="header__nav-link">Расположение</a>
+                        <a href="#main-features" class="header__nav-link">Характеристики</a>
+                        <a href="#features" class="header__nav-link">Особенности</a>
+                        <a href="#vacancies" class="header__nav-link">Помещения</a>
                     </div>
                     <div class="header__info">
                         <a href="tel:+79999999999" class="header__phone">+7 (999) 999-99-99</a>
@@ -50,7 +50,7 @@
             <div class="hero__wrapper">
                 <div class="hero__left">
                     <h1 class="hero__title">Название комплекса длинное</h1>
-                    <button class="btn hero__mob-btn">Получить предложение</button>
+                    <a href="#callback-form" class="btn hero__mob-btn">Получить предложение</a>
                     <div class="hero__info">
                         <div class="hero__class">Современные склады класса *Х*</div>
                         <div class="hero__description">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="hero__right">
-                    <a href="#" class="btn hero__btn">Получить предложение</a>
+                    <a href="#callback-form" class="btn hero__btn">Получить предложение</a>
                 </div>
             </div>
         </div>
@@ -147,7 +147,7 @@
                 </div>
             </div>
 
-            <div class="about">
+            <div class="about" id="about">
                <div class="about__wrapper">
                     <div class="about__sign">
                         <div class="about__sign-bull"></div>
@@ -184,7 +184,7 @@
                </div> 
             </div>
 
-            <div class="map__wrapper">
+            <div class="map__wrapper" id="location">
                 <div class="map__mob-title">Расположение</div>
                 <div class="map" id="map">
                     <div class="map__info">
@@ -203,7 +203,7 @@
                 </div>
             </div>
 
-            <div class="main-features">
+            <div class="main-features" id="main-features">
                 <h2 class="main-features__title">Основные характеристики</h2>
                 <div class="main-features__items">
                     <div class="main-features__items-row">
@@ -261,7 +261,7 @@
                 </div>
             </div>
 
-            <div class="features">
+            <div class="features" id="features">
                 <div class="features__head">
                     <h2 class="features__head-title">Особенности</h2>
                     <div class="slider-control slider-control-features">
@@ -317,7 +317,7 @@
                 </div>
             </div>
 
-            <div class="vacancies">
+            <div class="vacancies" id="vacancies">
                 <div class="vacancies__wrapper">
                     <div class="vacancies__head">
                         <div class="vacancies__head-left">
@@ -355,7 +355,7 @@
                                     <div class="vacancies__slider-item-tag">Мультитемпературный режим</div>
                                 </div>
         
-                                <a href="#" class="btn vacancies__slider-item-btn">Получить предложение</a>
+                                <a href="#callback-form" class="btn vacancies__slider-item-btn">Получить предложение</a>
                             </div>
                         </div>
                         <div class="vacancies__slider-item">
@@ -372,7 +372,7 @@
                                     <div class="vacancies__slider-item-tag">Мультитемпературный режим</div>
                                 </div>
         
-                                <a href="#" class="btn vacancies__slider-item-btn">Получить предложение</a>
+                                <a href="#callback-form" class="btn vacancies__slider-item-btn">Получить предложение</a>
                             </div>
                         </div>
                         <div class="vacancies__slider-item">
@@ -389,7 +389,7 @@
                                     <div class="vacancies__slider-item-tag">Мультитемпературный режим</div>
                                 </div>
         
-                                <a href="#" class="btn vacancies__slider-item-btn">Получить предложение</a>
+                                <a href="#callback-form" class="btn vacancies__slider-item-btn">Получить предложение</a>
                             </div>
                         </div>
                         <div class="vacancies__slider-item">
@@ -406,7 +406,7 @@
                                     <div class="vacancies__slider-item-tag">Мультитемпературный режим</div>
                                 </div>
         
-                                <a href="#" class="btn vacancies__slider-item-btn">Получить предложение</a>
+                                <a href="#callback-form" class="btn vacancies__slider-item-btn">Получить предложение</a>
                             </div>
                         </div>
                         <div class="vacancies__slider-item">
@@ -423,7 +423,7 @@
                                     <div class="vacancies__slider-item-tag">Мультитемпературный режим</div>
                                 </div>
         
-                                <a href="#" class="btn vacancies__slider-item-btn">Получить предложение</a>
+                                <a href="#callback-form" class="btn vacancies__slider-item-btn">Получить предложение</a>
                             </div>
                         </div>
                    </div>
@@ -434,7 +434,7 @@
                         Осталось 6 предложений
                    </div>
                 </div>
-                <div class="vacancies__offer">
+                <div class="vacancies__offer" id="callback-form">
                     <div class="vacancies__offer-wrapper">
                         <div class="vacancies__offer-left">
                             <form class="vacancies__offer-form">
@@ -443,7 +443,7 @@
                                 <div class="vacancies__offer-form-row">
                                     <div class="vacancies__offer-form-group">
                                         <label for="" class="vacancies__offer-form-label">Номер телефона для связи</label>
-                                        <input type="text" name="phone" id="phone" class="vacancies__offer-form-input" placeholder="+7">
+                                        <input type="text" name="phone" id="phone" class="vacancies__offer-form-input" pattern=".{16,}" title="Номер телефона должен содержать 10 цифр без учета 7" required placeholder="+7">
                                     </div>
                                     <input type="submit" value="Получить предложение" class="btn vacancies__offer-form-submit">
                                 </div>
@@ -483,14 +483,14 @@
                 </div>
                 <div class="footer__right">
                     <div class="footer__nav">
-                        <a href="#" class="footer__nav-link">О комплексе</a>
-                        <a href="#" class="footer__nav-link">Расположение</a>
-                        <a href="#" class="footer__nav-link">Характеристики</a>
-                        <a href="#" class="footer__nav-link">Особенности</a>
-                        <a href="#" class="footer__nav-link">Помещения</a>
+                        <a href="#about" class="footer__nav-link">О комплексе</a>
+                        <a href="#location" class="footer__nav-link">Расположение</a>
+                        <a href="#main-features" class="footer__nav-link">Характеристики</a>
+                        <a href="#features" class="footer__nav-link">Особенности</a>
+                        <a href="#vacancies" class="footer__nav-link">Помещения</a>
                     </div>
                     <a href="tel:+79770000000" class="footer__phone">+7 977 000 0000</a>
-                    <a href="#" class="btn footer__btn">Получить предложение</a>
+                    <a href="#callback-form" class="btn footer__btn">Получить предложение</a>
                     <div class="footer__copyright">2000-2025 © CMWP</div>
                 </div>
             </div>
@@ -506,7 +506,7 @@
     <div class="callback-popup">
         <div class="callback-popup__overlay"></div>
         <div class="callback-popup__body">
-            <from class="callback-popup__form">
+            <form class="callback-popup__form">
                 <div class="callback-popup__form-title">Заказать звонок</div>
                 <div class="callback-popup__form-text">
                     Оставьте свой whatsapp номер, чтобы мы&nbsp;отправили вам коммерческое предложение и&nbsp;расчет стоимости
@@ -514,11 +514,25 @@
                 <div class="callback-popup__form-group">
                     <label for="callback-phone" class="callback-popup__form-label">Номер телефона для связи</label>
                     <input type="text" name="callback-phone" id="callback-phone" class="callback-popup__form-input" placeholder="+7">
-                    <div class="callback-popup__form-error-message">Ошибка валидации</div>
+                    <div class="callback-popup__form-error-message">Введите номер телефона</div>
                 </div>
                 <input type="submit" value="Отправить" class="btn callback-popup__form-submit">
-            </from>
+            </form>
             <button class="callback-popup__body-close">
+                <svg width="10" height="10" viewBox="0 0 10 10"><use xlink:href="icons/stack/icons.svg#close"></use></svg>
+            </button>
+            <div class="callback-popup__body-send-animation">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-success">
+        <div class="modal-success__overlay"></div>
+        <div class="modal-success__body">
+            <div class="modal-success__title">Ваша заявка отправлена</div>
+            <div class="modal-success__text">Мы с вами скоро свяжемся</div>
+            <button class="modal-success__body-close">
                 <svg width="10" height="10" viewBox="0 0 10 10"><use xlink:href="icons/stack/icons.svg#close"></use></svg>
             </button>
         </div>

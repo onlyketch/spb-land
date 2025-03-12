@@ -23,6 +23,7 @@
         align-items: center;
         white-space: nowrap;
         padding-top: 6px;
+        user-select: none;
 
         &-bull {
             width: 6px;
@@ -132,6 +133,7 @@
                 font-weight: 700;
                 color: $dark-light;
                 margin: 0 16px;
+                user-select: none;
             }
 
             &-left {

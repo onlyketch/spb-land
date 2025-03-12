@@ -6,6 +6,7 @@
     &__box {
         margin-right: 110px;
         white-space: nowrap;
+        user-select: none;
 
         &:last-child {
             flex-grow: 1;
@@ -65,6 +66,10 @@
             font-size: 16px;
             line-height: 20px;
             margin-top: 4px;
+        }
+
+        @media (max-width: 369px) {
+            font-size: 14px;
         }
     }
 
