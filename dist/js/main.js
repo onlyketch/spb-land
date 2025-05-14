@@ -1,4 +1,82 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    /* Фиксация header */
+
+    const sectionDataPos = $('#data-section').offset().top - 250;
+    const sectionAboutPos = $('#about').offset().top - 380;
+    const sectionLocationPos = $('#location').offset().top - 380;
+    const sectionMainFeaturesPos = $('#main-features').offset().top - 380;
+    const sectionFeaturesPos = $('#features').offset().top - 380;
+    const sectionVacanciesPos = $('#vacancies-box').offset().top - 2400;
+    const header = document.querySelector('.header');
+    const headerNavLinkAbout = document.getElementById('nav-about');
+    const headerNavLinkLocation = document.getElementById('nav-location');
+    const headerNavLinkMainFeatures = document.getElementById('nav-main-features');
+    const headerNavLinkFeatures = document.getElementById('nav-features');
+    const headerNavLinkVacancies = document.getElementById('nav-vacancies');
+    const headerNavLinks = document.querySelectorAll('.header__nav-link');
+
+    
+
+   window.addEventListener('scroll', function() {
+        if (window.pageYOffset >= sectionDataPos) {
+            if (!header.classList.contains('fix')) {
+                header.classList.add('fix');
+            }
+            
+        } else {
+            if (header.classList.contains('fix')) {
+                header.classList.remove('fix');
+                
+                headerNavLinks.forEach(link => {
+                    if (link.classList.contains('active')) link.classList.remove('active');
+                });
+            }
+        }
+
+        if (window.pageYOffset >= sectionAboutPos) {
+            headerNavLinks.forEach(link => {
+                if (link.classList.contains('active')) link.classList.remove('active');
+            });
+           
+            headerNavLinkAbout.classList.add('active'); 
+        }
+
+        if (window.pageYOffset >= sectionLocationPos) {
+            headerNavLinks.forEach(link => {
+                if (link.classList.contains('active')) link.classList.remove('active');
+            });
+           
+            headerNavLinkLocation.classList.add('active'); 
+        }
+
+        if (window.pageYOffset >= sectionMainFeaturesPos) {
+            headerNavLinks.forEach(link => {
+                if (link.classList.contains('active')) link.classList.remove('active');
+            });
+           
+            headerNavLinkMainFeatures.classList.add('active'); 
+        }
+
+        if (window.pageYOffset >= sectionFeaturesPos) {
+            headerNavLinks.forEach(link => {
+                if (link.classList.contains('active')) link.classList.remove('active');
+            });
+           
+            headerNavLinkFeatures.classList.add('active'); 
+        }
+
+        console.log(sectionVacanciesPos);
+        console.log(window.pageYOffset);
+
+        if (window.pageYOffset >= sectionVacanciesPos) {
+            headerNavLinks.forEach(link => {
+                if (link.classList.contains('active')) link.classList.remove('active');
+            });
+            
+            headerNavLinkVacancies.classList.add('active'); 
+        }
+    });
     
     /* Маски для инпутов с телефонами */
 

@@ -239,7 +239,7 @@ a {
 }
 
 #about {
-    scroll-margin-top: 60px;
+    scroll-margin-top: 120px;
     
     @media (max-width: 1023px) {
         scroll-margin-top: 40px;
@@ -247,7 +247,7 @@ a {
 }
 
 #location {
-    scroll-margin-top: 50px;
+    scroll-margin-top: 120px;
 
     @media (max-width: 1023px) {
         scroll-margin-top: 40px;
@@ -255,13 +255,13 @@ a {
 }
 
 #main-features, #features {
-    scroll-margin-top: 50px;
+    scroll-margin-top: 120px;
 
     @media (max-width: 1023px) {
         scroll-margin-top: 40px;
     }
 }
 
-#vacancies {
-    scroll-margin-top: 50px;
+#vacancies-box {
+    scroll-margin-top: 120px;
 }
